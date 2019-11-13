@@ -1,0 +1,2 @@
+# WorldQuant_University__Introduction-to-Data-Science__mini_projects_answers
+answers of miniproject of worldQuant_University Introduction to Data Science
