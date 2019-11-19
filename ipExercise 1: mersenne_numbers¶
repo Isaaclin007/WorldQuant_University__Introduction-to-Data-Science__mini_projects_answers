@@ -1,0 +1,57 @@
+A Mersenne number is any number that can be written as  2p−12p−1  for some  pp . For example, 3 is a Mersenne number ( 22−122−1 ) as is 31 ( 25−125−1 ). We will see later on that it is easy to test if Mersenne numbers are prime.
+
+Write a function that accepts an exponent  pp  and returns the corresponding Mersenne number.
+
+def mersenne_number(p):
+    return (2**p)-1
+​
+​
+​
+​
+​
+Mersenne numbers can only be prime if their exponent, pp, is prime. Make a list of the Mersenne numbers for all primes pp between 3 and 65 (there should be 17 of them).
+
+Hint: It may be useful to modify the is_prime and get_primes functions from the Program Flow notebook for use in this problem.
+
+my_list=[]
+primes=[3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61]
+for i in range(17):
+    my_list.append(mersenne_number(primes[i]))
+print(my_list)
+​
+[7, 31, 127, 2047, 8191, 131071, 524287, 8388607, 536870911, 2147483647, 137438953471, 2199023255551, 8796093022207, 140737488355327, 9007199254740991, 576460752303423487, 2305843009213693951]
+# we can also make an empty list and add items to it
+​
+another_list=[]
+​
+​
+​
+for item in my_list:
+    another_list.append(item)
+​
+print(another_list)
+[7, 31, 127, 2047, 8191, 131071, 524287, 8388607, 536870911, 2147483647, 137438953471, 2199023255551, 8796093022207, 140737488355327, 9007199254740991, 576460752303423487, 2305843009213693951]
+f=0
+def is_prime(number):
+    for i in range(2,number):
+        if number%i==0:
+            f=1
+            break
+    if f==1 :     
+        return True
+    else:
+        return False
+​
+def get_primes(n_start, n_end):
+    primes=[]
+    for i in range(n_start,n_end):
+        if is_prime(i):
+            l.append(i)
+    return primes        
+The next cell shows a dummy solution, a list of 17 sevens. Alter the next cell to make use of the functions you've defined above to create the appropriate list of Mersenne numbers.
+
+mersennes = [7] * 17
+grader.score.ip__mersenne_numbers(mersennes)
+==================
+Your score:  0.058823529411764705
+==================
